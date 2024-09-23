@@ -1,0 +1,196 @@
+/* Define margens e preenchimentos padrão para todos os elementos e aplica o sistema de box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte padrão */
+}
+
+/* Define a cor de fundo da página */
+html {
+    background-color: #0d1117;
+}
+
+/* Define a imagem de fundo e suas dimensões no topo da página */
+#background-img {
+    background-image: url(./imgs/360_F_461470323_6TMQSkCCs9XQoTtyer8VCsFypxwRiDGU.jpg);
+    height: 250px;
+    width: 100%;
+}
+
+/* Define a posição do perfil para sobrepor a imagem de fundo */
+#perfil {
+    position: relative;
+    bottom: 105px; /* Posiciona o perfil acima da linha da imagem de fundo */
+}
+
+/* Define o estilo da imagem de perfil, com borda arredondada */
+#perfil #img {
+    height: 150px;
+    width: 150px;
+    display: block;
+    border: #0d1117 5px solid; /* Borda para integrar com o fundo */
+    border-radius: 50%; /* Torna a imagem circular */
+}
+
+/* Define o estilo do campo de input do nome de usuário */
+#nomeUsuario {
+    width: 150px;
+    height: 20px;
+    text-align: center; /* Centraliza o texto dentro do input */
+    margin-top: 20px;
+    background-color: #0d1117; /* Cor de fundo do input */
+    color: white; /* Cor do texto */
+    border: none;
+    border-radius: 20px; /* Bordas arredondadas */
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Fonte do input */
+}
+
+/* Remove a borda de foco padrão quando o campo de nome de usuário é selecionado */
+#nomeUsuario:focus {
+    outline: none;
+}
+
+/* Define o espaçamento e preenchimento da seção de login */
+#login {
+    padding-right: 50px;
+    padding: 5vh;
+}
+
+/* Define o layout da área de publicação */
+#publicacao {
+    display: flex;
+    flex-direction: column; /* Coloca os itens em coluna */
+    align-items: center; /* Centraliza os itens no eixo horizontal */
+}
+
+/* Define o estilo da textarea onde o usuário escreve o tweet */
+#textoPub {
+    background-color: #161b22;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 2%;
+    text-align: left; /* Texto alinhado à esquerda */
+    resize: none; /* Remove a capacidade de redimensionamento da textarea */
+    word-wrap: break-word; /* Quebra de linha automática para palavras longas */
+    padding: 10px;
+    width: 35%;
+    min-height: 60px;
+    max-height: auto; /* Permite ajuste automático da altura */
+    font-size: 20px;
+}
+
+/* Remove a borda de foco padrão ao selecionar a textarea */
+#textoPub:focus {
+    outline: none;
+}
+
+/* Define o estilo do botão de publicação */
+#botaoPub {
+    height: 5vh;
+    padding: 0 5vh; /* Espaçamento interno */
+    background-color: #08afed; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer; /* Muda o cursor para "pointer" ao passar por cima */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo ao passar o mouse */
+}
+
+/* Muda a cor do botão ao passar o mouse por cima */
+#botaoPub:hover {
+    background-color: #3ebceb;
+}
+
+/* Remove a borda padrão do hr (linha) e define cor e altura personalizada */
+hr {
+    border: none;
+    height: 1px;
+    background-color: #323539; /* Cor da linha */
+    margin: 0;
+}
+
+/* Define o estilo dos itens da lista de postagens */
+li {
+    margin: 3%;
+    color: white;
+    list-style-type: none; /* Remove os marcadores padrão da lista */
+}
+
+/* Define o estilo da imagem de perfil dentro das postagens */
+.img-post {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border: transparent 5px solid;
+    border-radius: 50%; /* Torna a imagem circular */
+}
+
+/* Define o estilo da imagem de gatos */
+.img-gato {
+    margin-top: 10px;
+    width: 500px;
+    height: auto; /* Ajusta a altura proporcionalmente à largura */
+    padding-left: 80px; /* Espaçamento à esquerda */
+}
+
+/* Estiliza o parágrafo dentro das postagens */
+p {
+    padding-left: 80px; /* Espaçamento à esquerda */
+}
+
+/* Define o estilo específico para o primeiro parágrafo (nome de usuário) */
+p:first-of-type {
+    font-size: 20px;
+    font-weight: bold; /* Negrito para destacar o nome do usuário */
+}
+
+/* Estiliza o botão de curtir */
+.botaoCurtir {
+    background-color: #08afed; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    border: none;
+    border-radius: 25px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Centraliza o conteúdo dentro do botão */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições para hover e clique */
+    margin-top: 10px;
+    margin-left: 80px;
+    margin-right: 10px; /* Espaçamento entre o botão e o contador */
+}
+
+/* Estiliza o contador de curtidas */
+.curtidasContador {
+    font-size: 16px;
+    padding: 10px 0px;
+    margin-top: 10px;
+}
+
+/* Contêiner que agrupa o botão curtir e o contador de likes */
+.like-container {
+    display: flex;
+    align-items: center; /* Alinha o botão e o contador na mesma linha */
+    gap: 5px; /* Espaçamento entre o botão e o contador */
+}
+
+/* Define a mudança de cor e o efeito de escala ao passar o mouse por cima do botão curtir */
+.botaoCurtir:hover {
+    background-color: #007bb5;
+    transform: scale(1.05);
+}
+
+/* Define o efeito de escala ao clicar no botão curtir */
+.botaoCurtir:active {
+    transform: scale(0.95);
+}
+
+/* Estiliza o ícone de curtida dentro do botão */
+.botaoCurtir .like-icon {
+    margin-right: 8px;
+}

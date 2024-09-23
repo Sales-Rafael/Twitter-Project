@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Vincula o arquivo CSS externo -->
+    <link href="index.css" rel="stylesheet" />
+    <!-- Vincula o CDN para ícones Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Exercicio de API</title>
+  </head>
+  <body>
+    <header>
+      <!-- Seção de fundo para a área de perfil -->
+      <section id="background-img"></section>
+
+      <!-- Seção de perfil onde usuário insere nome e vê imagem -->
+      <section id="perfil">
+        <section id="login">
+          <!-- Foto de perfil fixa -->
+          <img
+            id="img"
+            src="https://i.redd.it/qflfcveitxq51.png"
+            alt="Foto de Perfil"
+          />
+          <!-- Campo de texto para o nome do usuário -->
+          <input type="text" placeholder="Seu Nome" id="nomeUsuario" />
+        </section>
+
+        <!-- Seção de postagem com textarea e botão de publicar -->
+        <section id="publicacao">
+          <textarea
+            placeholder="O que está acontecendo?"
+            id="textoPub"
+            maxlength="280"
+          ></textarea>
+          <button id="botaoPub">Publicar</button>
+        </section>
+      </section>
+      <hr />
+    </header>
+
+    <main>
+      <!-- Lista onde os posts vão aparecer dinamicamente -->
+      <ul id="lista-nao-ordenada"></ul>
+    </main>
+
+    <!-- Vincula o arquivo JavaScript -->
+    <script src="./API.js"></script>
+  </body>
+</html>
